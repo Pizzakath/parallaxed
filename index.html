@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <title>My first Parallax website</title>
+  </head>
+  <body>
+    <header>
+      <a href="#" class="logo">logo</a>
+      <ul>
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Work</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </header>
+    <section>
+      <img src="stars.png" alt="stars" id="stars" />
+      <img src="moon.png" alt="moon" id="moon" />
+      <img
+        src="mountains_behind.png"
+        alt="mountains_behind"
+        id="mountains_behind"
+      />
+      <h2 id="text">Moon Light</h2>
+      <a href="#" id="btn-explore">Explore</a>
+      <img
+        src="mountains_front.png"
+        alt="mountain_front"
+        id="mountains_front"
+      />
+    </section>
+    <div id="sec" class="sec">
+      <h2>Parallax Scrolling Effects</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur
+        nisi dolorum, nulla repudiandae ullam molestias nesciunt eaque
+        praesentium magnam voluptates cum dignissimos animi dicta nemo, id eum
+        cupiditate, alias sequi? Vitae cum facere error ipsum cumque ducimus
+        maiores dolores aliquam fuga eligendi similique vel, saepe doloribus?
+        Minus, aspernatur in beatae tempore dolorum, aperiam eveniet iusto iure
+        eligendi obcaecati quidem optio.
+      </p>
+    </div>
+
+    <script>
+      let stars = document.getElementById('stars');
+      let moon = document.getElementById('moon');
+      let mountains_behind = document.getElementById('mountains_behind');
+      let text = document.getElementById('text');
+      let btn = document.getElementById('btn-explore');
+      let mountains_front = document.getElementById('mountains_front');
+      let sec = document.getElementById('sec');
+
+      window.addEventListener('scroll', () => {
+        let value = window.scrollY;
+        stars.style.left = value * 0.25 + 'px';
+        moon.style.top = value * 1.05 + 'px';
+        mountains_behind.style.top = vlue * 1.05 + 'px';
+      });
+    </script>
+  </body>
+</html>
